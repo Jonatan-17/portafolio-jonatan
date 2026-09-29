@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonatan David | Portafolio Full Stack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">JONATAN DAVID</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#camino">Mi Camino</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <span class="profile-icon"></span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">PORTAFOLIO</div>
+            <h1 class="hero-title">JONATAN DAVID</h1>
+            <p class="hero-subtitle">Desarrollador Full Stack | Estudiante de Ingeniería de Sistemas</p>
+            <p class="hero-tagline">"Mientras el proceso sea largo, la gloria será eterna"</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('proyectos')">▶ Ver Proyectos</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('camino')">ⓘ Mi Historia</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about-section" id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Soy <strong>Jonatan David</strong>, desarrollador Full Stack y estudiante de Ingeniería de Sistemas, formado en Campuslands. Me apasiona unir el desarrollo web con la <strong>inteligencia artificial y la automatización</strong> para resolver problemas reales: desde reportes urbanos hasta gestión de tickets y finanzas personales.</p>
+                <p>Construyo soluciones completas: la interfaz que ve el usuario, la lógica detrás y los flujos automáticos que conectan todo con servicios como Telegram, bases de datos y modelos de IA.</p>
+                <div class="about-stats">
+                    <div><b>4</b><span>Proyectos en desarrollo</span></div>
+                    <div><b>4</b><span>Servicios que ofrezco</span></div>
+                    <div><b>IA</b><span>+ Automatización</span></div>
+                </div>
+            </div>
+            <div class="skills">
+                <h4>Frontend</h4>
+                <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Leaflet.js</span></div>
+                <h4>Automatización e IA</h4>
+                <div class="chips"><span>N8N</span><span>Gemini</span><span>GPT-4</span><span>Telegram Bot</span></div>
+                <h4>Datos e infraestructura</h4>
+                <div class="chips"><span>PostgreSQL</span><span>Docker</span><span>Webcam API</span><span>Local Storage</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section class="carousel-section" id="proyectos">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel('projects-carousel', -1)">‹</button>
+            <div class="carousel" id="projects-carousel">
+                
+                <!-- PROYECTO 1: SmartCity-F -->
+                <div class="project-card" data-id="smartcity" onclick="openTrailer('smartcity')">
+                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/1a1a2e/FFF?text=SmartCity-F')">
+                        <div class="card-badge badge-dev">EN DESARROLLO</div>
+                        <div class="card-overlay"><div class="play-icon">▶</div></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>SmartCity-F</h3>
+                        <p>Reportes urbanos inteligentes con IA</p>
+                        <div class="card-tech"><span>N8N</span><span>Gemini</span><span>Telegram</span></div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2: HelpDeskAI -->
+                <div class="project-card" data-id="helpdesk" onclick="openTrailer('helpdesk')">
+                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/16213e/FFF?text=HelpDeskAI')">
+                        <div class="card-badge badge-dev">EN DESARROLLO</div>
+                        <div class="card-overlay"><div class="play-icon">▶</div></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>HelpDeskAI</h3>
+                        <p>Gestión de tickets con IA</p>
+                        <div class="card-tech"><span>GPT-4</span><span>PostgreSQL</span><span>N8N</span></div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3: Don't Give Up -->
+                <div class="project-card" data-id="dontgiveup" onclick="openTrailer('dontgiveup')">
+                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/0f3460/FFF?text=Don%27t+Give+Up')">
+                        <div class="card-badge badge-dev">EN DESARROLLO</div>
+                        <div class="card-overlay"><div class="play-icon">▶</div></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Don't Give Up</h3>
+                        <p>Finanzas personales gamificadas</p>
+                        <div class="card-tech"><span>XP System</span><span>Calendario</span><span>Local Storage</span></div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4: SafeGuardian -->
+                <div class="project-card" data-id="safeguardian" onclick="openTrailer('safeguardian')">
+                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/533483/FFF?text=SafeGuardian')">
+                        <div class="card-badge badge-dev">EN DESARROLLO</div>
+                        <div class="card-overlay"><div class="play-icon">▶</div></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>SafeGuardian</h3>
+                        <p>Monitoreo de conductores con IA</p>
+                        <div class="card-tech"><span>Webcam API</span><span>N8N</span><span>IA</span></div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel('projects-carousel', 1)">›</button>
+        </div>
+    </section>
+
+    <!-- MI CAMINO -->
+    <section class="story-section" id="camino">
+        <h2 class="section-title">Mi Camino de Estudio</h2>
+        <div class="story">
+            <div class="story-text">
+                <div class="story-episode">
+                    <span class="episode-tag">TEMPORADA 1 · EL INICIO</span>
+                    <h3>Campuslands: un mundo nuevo</h3>
+                    <p>Mi camino empezó en Campuslands, y no fue fácil. Había muchísimos temas nuevos, conceptos que nunca había visto y un ritmo que exigía todo de mí. Pero también fue una etapa llena de muy buenas experiencias: aprendí, me equivoqué, y fui conociendo a mucha gente que hizo el camino más llevadero.</p>
+                </div>
+
+                <div class="story-episode">
+                    <span class="episode-tag">TEMPORADA 2 · LA TORMENTA</span>
+                    <h3>Cuando todo se complicó</h3>
+                    <p>A medida que avanzaba, llegaron las dificultades de verdad. Me echaron de la casa, y de un momento a otro tuve que preocuparme por sobrevivir antes que por estudiar. Descuidé el estudio por pensar en trabajar, y mi nivel académico bajó mucho. Fue el punto más bajo del camino, y no voy a fingir que no lo fue.</p>
+                </div>
+
+                <div class="story-episode">
+                    <span class="episode-tag">TEMPORADA 3 · LA RESILIENCIA</span>
+                    <h3>Pero yo no me rindo</h3>
+                    <p>A pesar de todo, soy una persona resiliente que nunca se rinde. Cada caída me enseñó algo que ningún curso me habría enseñado: disciplina, humildad y hambre de seguir construyendo. Hoy sigo aprendiendo y creando proyectos reales, convencido de que <em>mientras el proceso sea largo, la gloria será eterna</em>.</p>
+                </div>
+
+                <p class="story-next">Esta historia todavía se está escribiendo… <span>Próximamente: el siguiente capítulo.</span></p>
+            </div>
+
+            <div class="story-photo">
+                <div class="photo-frame">
+                    <img src="assets/images/perfil.png" alt="Jonatan David">
+                    <div class="photo-caption">
+                        <strong>Jonatan David</strong>
+                        <span>Desarrollador Full Stack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="carousel-section" id="servicios">
+        <h2 class="section-title">Servicios</h2>
+        <p class="section-sub">Elige los servicios que te interesan, agrégalos a tu lista y envíame la solicitud por WhatsApp o correo.</p>
+        <div class="services-grid">
+            <article class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>APIs e integraciones</h3>
+                <p>Conecto tu sistema con servicios externos y modelos de IA para que tus datos y procesos hablen entre sí.</p>
+                <h4>¿Qué haría?</h4>
+                <ul><li>Integración con APIs de terceros (IA, mensajería, pagos, etc.)</li><li>Webhooks y endpoints para recibir y enviar datos</li><li>Conexión con bases de datos como PostgreSQL</li><li>Documentación clara de cada integración</li></ul>
+                <h4>Experiencia</h4>
+                <p class="service-exp">Integré Google Gemini 2.5 en SmartCity-F y GPT-4 en HelpDeskAI, conectados con Telegram y PostgreSQL.</p>
+                <button class="btn btn-secondary add-btn" data-id="api" onclick="toggleServicio('api')">+ Añadir a mi lista</button>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Automatizaciones</h3>
+                <p>Elimino tareas repetitivas creando flujos que trabajan solos, con IA para clasificar, decidir y avisar.</p>
+                <h4>¿Qué haría?</h4>
+                <ul><li>Flujos de trabajo en N8N de principio a fin</li><li>Clasificación y priorización automática con IA</li><li>Notificaciones por Telegram y Email</li><li>Guardado y reportes automáticos</li></ul>
+                <h4>Experiencia</h4>
+                <p class="service-exp">Automaticé la recepción y priorización de incidentes (SmartCity-F), la gestión de tickets (HelpDeskAI) y los reportes de SafeGuardian.</p>
+                <button class="btn btn-secondary add-btn" data-id="auto" onclick="toggleServicio('auto')">+ Añadir a mi lista</button>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>Creación de bots</h3>
+                <p>Bots que atienden, notifican y recolectan información por Telegram, con respuestas inteligentes si lo necesitas.</p>
+                <h4>¿Qué haría?</h4>
+                <ul><li>Bots de Telegram a la medida</li><li>Respuestas y clasificación con IA</li><li>Alertas y notificaciones en tiempo real</li><li>Integración con tus sistemas y bases de datos</li></ul>
+                <h4>Experiencia</h4>
+                <p class="service-exp">Bots de Telegram funcionando en SmartCity-F y HelpDeskAI para avisar reportes y tickets.</p>
+                <button class="btn btn-secondary add-btn" data-id="bots" onclick="toggleServicio('bots')">+ Añadir a mi lista</button>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Páginas web</h3>
+                <p>Sitios y aplicaciones web modernas, responsivas y rápidas, desde un portafolio hasta un dashboard completo.</p>
+                <h4>¿Qué haría?</h4>
+                <ul><li>Landing pages, portafolios y sitios informativos</li><li>Dashboards y aplicaciones interactivas</li><li>Diseño responsivo (celular, tablet y PC)</li><li>Mapas, calendarios y gamificación</li></ul>
+                <h4>Experiencia</h4>
+                <p class="service-exp">Desarrollé dashboards, mapas con Leaflet.js y una app gamificada de finanzas (Don't Give Up), además de este portafolio.</p>
+                <button class="btn btn-secondary add-btn" data-id="web" onclick="toggleServicio('web')">+ Añadir a mi lista</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-logo">JONATAN DAVID</div>
+            <p>Desarrollador Full Stack | Cambiando el mundo con código</p>
+            <div class="footer-social">
+                <a id="link-whatsapp" href="#" target="_blank">WhatsApp</a>
+                <a id="link-email" href="#">Email</a>
+                <a id="link-github" href="#" target="_blank">GitHub</a>
+                <a id="link-linkedin" href="#" target="_blank">LinkedIn</a>
+            </div>
+            <p class="footer-copy">© 2025 Jonatan David. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL TRÁILER -->
+    <div class="trailer-modal" id="trailer-modal">
+        <div class="trailer-content">
+            <button class="close-btn" onclick="closeTrailer()">✕</button>
+            <div class="trailer-slideshow" id="trailer-slideshow"></div>
+            <div class="trailer-info">
+                <div class="trailer-header">
+                    <h2 id="trailer-title">Título del Proyecto</h2>
+                    <span class="trailer-badge badge-dev" id="trailer-badge">EN DESARROLLO</span>
+                </div>
+                <div class="trailer-meta">
+                    <span class="match-score">98% relevante</span>
+                    <span class="year">2025</span>
+                    <span class="rating">PG-13</span>
+                </div>
+                <div class="trailer-buttons">
+                    <a href="#" target="_blank" class="btn btn-primary" id="trailer-github">▶ Ver en GitHub</a>
+                    <button class="btn btn-secondary">+ Mi Lista</button>
+                </div>
+                <p class="trailer-description" id="trailer-description">Descripción del proyecto.</p>
+                <h4 class="trailer-h">¿Qué hace?</h4>
+                <ul class="trailer-features" id="trailer-features"></ul>
+                <h4 class="trailer-h">Tecnologías</h4>
+                <div class="trailer-tech" id="trailer-tech"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MI LISTA DE SERVICIOS -->
+    <button class="list-fab" onclick="toggleLista()">📋 Mi Lista <span id="list-count">0</span></button>
+    <aside class="list-panel" id="list-panel">
+        <div class="list-head"><h3>Mi lista de servicios</h3><button class="close-list" onclick="toggleLista()">✕</button></div>
+        <ul id="list-items"></ul>
+        <p class="list-empty" id="list-empty">Aún no has agregado servicios.</p>
+        <textarea id="list-msg" placeholder="Cuéntame brevemente tu idea o proyecto (opcional)"></textarea>
+        <button class="btn btn-primary" onclick="enviarSolicitud('whatsapp')">Enviar por WhatsApp</button>
+        <button class="btn btn-secondary" onclick="enviarSolicitud('email')">Enviar por Email</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
