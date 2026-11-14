@@ -3,255 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonatan David | Portafolio Full Stack</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Jonatan David Sarmiento | Desarrollador Backend</title>
+    <meta name="description" content="Portafolio de Jonatan David Sarmiento, desarrollador backend con conocimientos de frontend: Java, Spring Boot, PostgreSQL y automatización con IA. Piedecuesta, Colombia.">
+    <meta name="author" content="Jonatan David Sarmiento Sierra">
+    <meta name="theme-color" content="#141414">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portafolio-jonatan.vercel.app/">
+    <meta property="og:title" content="Jonatan David Sarmiento | Desarrollador Backend">
+    <meta property="og:description" content="Java, Spring Boot, PostgreSQL y automatización con IA. Mira mis proyectos y escríbeme.">
+    <meta property="og:image" content="https://portafolio-jonatan.vercel.app/assets/og-image.png">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-left">
-            <div class="logo">JONATAN DAVID</div>
-            <ul class="nav-links">
+            <a class="logo" href="#inicio">JONATAN DAVID</a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#camino">Mi camino</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#camino">Mi Camino</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
         <div class="nav-right">
-            <span class="profile-icon"></span>
+            <a class="nav-cta" data-whatsapp="contacto" href="#contacto" target="_blank" rel="noopener">Hablemos</a>
+            <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="inicio">
-        <div class="hero-overlay"></div>
+    <!-- HERO -->
+    <header class="hero" id="inicio">
         <div class="hero-content">
-            <div class="hero-badge">PORTAFOLIO</div>
+            <div class="hero-badge"><span>J</span> SERIE ORIGINAL · BACKEND</div>
             <h1 class="hero-title">JONATAN DAVID</h1>
-            <p class="hero-subtitle">Desarrollador Full Stack | Estudiante de Ingeniería de Sistemas</p>
+            <div class="hero-meta">
+                <span class="match">Abierto a oportunidades</span>
+                <span>2026</span>
+                <span class="hd">JAVA</span>
+                <span>Spring Boot · PostgreSQL · IA</span>
+            </div>
+            <p class="hero-subtitle">Desarrollador <strong>Backend</strong> con conocimientos de <strong>Frontend</strong>. Construyo APIs seguras con Java y Spring Boot, modelo bases de datos y automatizo procesos con inteligencia artificial.</p>
             <p class="hero-tagline">"Mientras el proceso sea largo, la gloria será eterna"</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('proyectos')">▶ Ver Proyectos</button>
-                <button class="btn btn-secondary" onclick="scrollToSection('camino')">ⓘ Mi Historia</button>
+                <a class="btn btn-primary" href="#proyectos">▶ Ver proyectos</a>
+                <a class="btn btn-secondary" data-whatsapp="contacto" href="#contacto" target="_blank" rel="noopener">💬 Escríbeme por WhatsApp</a>
+                <!-- Hoja de vida: se activa cuando esté lista -->
+                <a class="btn btn-secondary" id="btn-cv" href="#" hidden>📄 Hoja de vida</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- SOBRE MÍ -->
-    <section class="about-section" id="sobre-mi">
-        <h2 class="section-title">Sobre Mí</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Soy <strong>Jonatan David</strong>, desarrollador Full Stack y estudiante de Ingeniería de Sistemas, formado en Campuslands. Me apasiona unir el desarrollo web con la <strong>inteligencia artificial y la automatización</strong> para resolver problemas reales: desde reportes urbanos hasta gestión de tickets y finanzas personales.</p>
-                <p>Construyo soluciones completas: la interfaz que ve el usuario, la lógica detrás y los flujos automáticos que conectan todo con servicios como Telegram, bases de datos y modelos de IA.</p>
-                <div class="about-stats">
-                    <div><b>4</b><span>Proyectos en desarrollo</span></div>
-                    <div><b>4</b><span>Servicios que ofrezco</span></div>
-                    <div><b>IA</b><span>+ Automatización</span></div>
+    <main>
+        <!-- SOBRE MÍ -->
+        <section class="about-section" id="sobre-mi">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy <strong>Jonatan David Sarmiento</strong>, desarrollador de software formado en <strong>Campuslands</strong>, en Piedecuesta, Santander. Me enfoco en el <strong>backend con Java y Spring Boot</strong>: APIs REST con seguridad JWT, bases de datos relacionales bien modeladas y pruebas automatizadas.</p>
+                    <p>También conozco el <strong>frontend</strong> (HTML, CSS y JavaScript) y me apasiona conectar aplicaciones con <strong>automatizaciones en n8n e inteligencia artificial</strong>: búsqueda semántica (RAG), visión por computador y bots de Telegram. Trabajo en equipo con Git, ramas y pull requests, y estoy listo para mi primera oportunidad como desarrollador.</p>
+                    <div class="about-stats">
+                        <div><b>10+</b><span>Proyectos en GitHub</span></div>
+                        <div><b>250+</b><span>Contribuciones en 2026</span></div>
+                        <div><b>4</b><span>Proyectos en equipo</span></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h4>Backend</h4>
+                    <div class="chips"><span>Java 21</span><span>Spring Boot</span><span>Spring Security · JWT</span><span>JPA / Hibernate</span><span>APIs REST</span><span>Python</span><span>FastAPI</span></div>
+                    <h4>Bases de datos</h4>
+                    <div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>H2</span><span>Triggers y procedimientos</span></div>
+                    <h4>IA y automatización</h4>
+                    <div class="chips"><span>n8n</span><span>Google Gemini</span><span>OpenRouter</span><span>Qdrant (RAG)</span><span>MediaPipe</span><span>Telegram Bots</span></div>
+                    <h4>Frontend</h4>
+                    <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Leaflet.js</span></div>
+                    <h4>Herramientas</h4>
+                    <div class="chips"><span>Git y GitHub</span><span>Docker</span><span>Gradle</span><span>Maven</span><span>Swagger</span><span>IntelliJ IDEA</span></div>
                 </div>
             </div>
-            <div class="skills">
-                <h4>Frontend</h4>
-                <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Leaflet.js</span></div>
-                <h4>Automatización e IA</h4>
-                <div class="chips"><span>N8N</span><span>Gemini</span><span>GPT-4</span><span>Telegram Bot</span></div>
-                <h4>Datos e infraestructura</h4>
-                <div class="chips"><span>PostgreSQL</span><span>Docker</span><span>Webcam API</span><span>Local Storage</span></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROYECTOS DESTACADOS -->
-    <section class="carousel-section" id="proyectos">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="carousel-container">
-            <button class="carousel-btn prev" onclick="moveCarousel('projects-carousel', -1)">‹</button>
-            <div class="carousel" id="projects-carousel">
-                
-                <!-- PROYECTO 1: SmartCity-F -->
-                <div class="project-card" data-id="smartcity" onclick="openTrailer('smartcity')">
-                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/1a1a2e/FFF?text=SmartCity-F')">
-                        <div class="card-badge badge-dev">EN DESARROLLO</div>
-                        <div class="card-overlay"><div class="play-icon">▶</div></div>
+        <!-- PROYECTOS: filas estilo Netflix generadas desde script.js -->
+        <section id="proyectos" class="rows-section">
+            <div id="rows"></div>
+        </section>
+
+        <!-- MI CAMINO -->
+        <section class="story-section" id="camino">
+            <h2 class="section-title">Mi camino</h2>
+            <div class="story">
+                <div class="story-text">
+                    <div class="story-episode">
+                        <span class="episode-tag">TEMPORADA 1 · EL INICIO</span>
+                        <h3>Campuslands: un mundo nuevo</h3>
+                        <p>Mi camino empezó en Campuslands, y no fue fácil. Había muchísimos temas nuevos, conceptos que nunca había visto y un ritmo que exigía todo de mí. Empecé con Python y la web, y conocí a gente que hizo el camino más llevadero.</p>
                     </div>
-                    <div class="card-info">
-                        <h3>SmartCity-F</h3>
-                        <p>Reportes urbanos inteligentes con IA</p>
-                        <div class="card-tech"><span>N8N</span><span>Gemini</span><span>Telegram</span></div>
+                    <div class="story-episode">
+                        <span class="episode-tag">TEMPORADA 2 · LA TORMENTA</span>
+                        <h3>Cuando todo se complicó</h3>
+                        <p>Fuera del aula llegaron momentos muy difíciles. Tuve que preocuparme por salir adelante y trabajar mientras estudiaba, y mi rendimiento bajó. Fue el punto más bajo del camino, y también el que más me enseñó.</p>
                     </div>
+                    <div class="story-episode">
+                        <span class="episode-tag">TEMPORADA 3 · LA RESILIENCIA</span>
+                        <h3>Pero yo no me rindo</h3>
+                        <p>Me levanté con disciplina y humildad. Aprendí a automatizar con n8n e IA, dominé SQL avanzado y participé en un hackatón con SafeGuardian. Cada caída me dio más hambre de seguir construyendo.</p>
+                    </div>
+                    <div class="story-episode">
+                        <span class="episode-tag">TEMPORADA 4 · EL SALTO AL BACKEND</span>
+                        <h3>Java, Spring Boot e IA</h3>
+                        <p>Hoy construyo APIs con Spring Boot, seguridad JWT, JPA y pruebas automatizadas, y las conecto con IA. CampusDesk y Recetas RAG, ambos en equipo, son mis proyectos más completos. Mientras el proceso sea largo, la gloria será eterna.</p>
+                    </div>
+                    <p class="story-next">Esta historia todavía se está escribiendo… <span>Próximamente: mi primer empleo como desarrollador.</span></p>
                 </div>
-
-                <!-- PROYECTO 2: HelpDeskAI -->
-                <div class="project-card" data-id="helpdesk" onclick="openTrailer('helpdesk')">
-                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/16213e/FFF?text=HelpDeskAI')">
-                        <div class="card-badge badge-dev">EN DESARROLLO</div>
-                        <div class="card-overlay"><div class="play-icon">▶</div></div>
-                    </div>
-                    <div class="card-info">
-                        <h3>HelpDeskAI</h3>
-                        <p>Gestión de tickets con IA</p>
-                        <div class="card-tech"><span>GPT-4</span><span>PostgreSQL</span><span>N8N</span></div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 3: Don't Give Up -->
-                <div class="project-card" data-id="dontgiveup" onclick="openTrailer('dontgiveup')">
-                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/0f3460/FFF?text=Don%27t+Give+Up')">
-                        <div class="card-badge badge-dev">EN DESARROLLO</div>
-                        <div class="card-overlay"><div class="play-icon">▶</div></div>
-                    </div>
-                    <div class="card-info">
-                        <h3>Don't Give Up</h3>
-                        <p>Finanzas personales gamificadas</p>
-                        <div class="card-tech"><span>XP System</span><span>Calendario</span><span>Local Storage</span></div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 4: SafeGuardian -->
-                <div class="project-card" data-id="safeguardian" onclick="openTrailer('safeguardian')">
-                    <div class="card-image" style="background-image: url('https://placehold.co/600x400/533483/FFF?text=SafeGuardian')">
-                        <div class="card-badge badge-dev">EN DESARROLLO</div>
-                        <div class="card-overlay"><div class="play-icon">▶</div></div>
-                    </div>
-                    <div class="card-info">
-                        <h3>SafeGuardian</h3>
-                        <p>Monitoreo de conductores con IA</p>
-                        <div class="card-tech"><span>Webcam API</span><span>N8N</span><span>IA</span></div>
-                    </div>
-                </div>
-
-            </div>
-            <button class="carousel-btn next" onclick="moveCarousel('projects-carousel', 1)">›</button>
-        </div>
-    </section>
-
-    <!-- MI CAMINO -->
-    <section class="story-section" id="camino">
-        <h2 class="section-title">Mi Camino de Estudio</h2>
-        <div class="story">
-            <div class="story-text">
-                <div class="story-episode">
-                    <span class="episode-tag">TEMPORADA 1 · EL INICIO</span>
-                    <h3>Campuslands: un mundo nuevo</h3>
-                    <p>Mi camino empezó en Campuslands, y no fue fácil. Había muchísimos temas nuevos, conceptos que nunca había visto y un ritmo que exigía todo de mí. Pero también fue una etapa llena de muy buenas experiencias: aprendí, me equivoqué, y fui conociendo a mucha gente que hizo el camino más llevadero.</p>
-                </div>
-
-                <div class="story-episode">
-                    <span class="episode-tag">TEMPORADA 2 · LA TORMENTA</span>
-                    <h3>Cuando todo se complicó</h3>
-                    <p>A medida que avanzaba, llegaron las dificultades de verdad. Me echaron de la casa, y de un momento a otro tuve que preocuparme por sobrevivir antes que por estudiar. Descuidé el estudio por pensar en trabajar, y mi nivel académico bajó mucho. Fue el punto más bajo del camino, y no voy a fingir que no lo fue.</p>
-                </div>
-
-                <div class="story-episode">
-                    <span class="episode-tag">TEMPORADA 3 · LA RESILIENCIA</span>
-                    <h3>Pero yo no me rindo</h3>
-                    <p>A pesar de todo, soy una persona resiliente que nunca se rinde. Cada caída me enseñó algo que ningún curso me habría enseñado: disciplina, humildad y hambre de seguir construyendo. Hoy sigo aprendiendo y creando proyectos reales, convencido de que <em>mientras el proceso sea largo, la gloria será eterna</em>.</p>
-                </div>
-
-                <p class="story-next">Esta historia todavía se está escribiendo… <span>Próximamente: el siguiente capítulo.</span></p>
-            </div>
-
-            <div class="story-photo">
-                <div class="photo-frame">
-                    <img src="assets/images/perfil.png" alt="Jonatan David">
-                    <div class="photo-caption">
-                        <strong>Jonatan David</strong>
-                        <span>Desarrollador Full Stack</span>
+                <div class="story-photo">
+                    <div class="photo-frame">
+                        <img src="assets/images/perfil.png" alt="Foto de Jonatan David Sarmiento" loading="lazy">
+                        <div class="photo-caption">
+                            <strong>Jonatan David</strong>
+                            <span>Backend · Java · Spring Boot</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SERVICIOS -->
-    <section class="carousel-section" id="servicios">
-        <h2 class="section-title">Servicios</h2>
-        <p class="section-sub">Elige los servicios que te interesan, agrégalos a tu lista y envíame la solicitud por WhatsApp o correo.</p>
-        <div class="services-grid">
-            <article class="service-card">
-                <div class="service-icon">🔌</div>
-                <h3>APIs e integraciones</h3>
-                <p>Conecto tu sistema con servicios externos y modelos de IA para que tus datos y procesos hablen entre sí.</p>
-                <h4>¿Qué haría?</h4>
-                <ul><li>Integración con APIs de terceros (IA, mensajería, pagos, etc.)</li><li>Webhooks y endpoints para recibir y enviar datos</li><li>Conexión con bases de datos como PostgreSQL</li><li>Documentación clara de cada integración</li></ul>
-                <h4>Experiencia</h4>
-                <p class="service-exp">Integré Google Gemini 2.5 en SmartCity-F y GPT-4 en HelpDeskAI, conectados con Telegram y PostgreSQL.</p>
-                <button class="btn btn-secondary add-btn" data-id="api" onclick="toggleServicio('api')">+ Añadir a mi lista</button>
-            </article>
-            <article class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>Automatizaciones</h3>
-                <p>Elimino tareas repetitivas creando flujos que trabajan solos, con IA para clasificar, decidir y avisar.</p>
-                <h4>¿Qué haría?</h4>
-                <ul><li>Flujos de trabajo en N8N de principio a fin</li><li>Clasificación y priorización automática con IA</li><li>Notificaciones por Telegram y Email</li><li>Guardado y reportes automáticos</li></ul>
-                <h4>Experiencia</h4>
-                <p class="service-exp">Automaticé la recepción y priorización de incidentes (SmartCity-F), la gestión de tickets (HelpDeskAI) y los reportes de SafeGuardian.</p>
-                <button class="btn btn-secondary add-btn" data-id="auto" onclick="toggleServicio('auto')">+ Añadir a mi lista</button>
-            </article>
-            <article class="service-card">
-                <div class="service-icon">🤖</div>
-                <h3>Creación de bots</h3>
-                <p>Bots que atienden, notifican y recolectan información por Telegram, con respuestas inteligentes si lo necesitas.</p>
-                <h4>¿Qué haría?</h4>
-                <ul><li>Bots de Telegram a la medida</li><li>Respuestas y clasificación con IA</li><li>Alertas y notificaciones en tiempo real</li><li>Integración con tus sistemas y bases de datos</li></ul>
-                <h4>Experiencia</h4>
-                <p class="service-exp">Bots de Telegram funcionando en SmartCity-F y HelpDeskAI para avisar reportes y tickets.</p>
-                <button class="btn btn-secondary add-btn" data-id="bots" onclick="toggleServicio('bots')">+ Añadir a mi lista</button>
-            </article>
-            <article class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Páginas web</h3>
-                <p>Sitios y aplicaciones web modernas, responsivas y rápidas, desde un portafolio hasta un dashboard completo.</p>
-                <h4>¿Qué haría?</h4>
-                <ul><li>Landing pages, portafolios y sitios informativos</li><li>Dashboards y aplicaciones interactivas</li><li>Diseño responsivo (celular, tablet y PC)</li><li>Mapas, calendarios y gamificación</li></ul>
-                <h4>Experiencia</h4>
-                <p class="service-exp">Desarrollé dashboards, mapas con Leaflet.js y una app gamificada de finanzas (Don't Give Up), además de este portafolio.</p>
-                <button class="btn btn-secondary add-btn" data-id="web" onclick="toggleServicio('web')">+ Añadir a mi lista</button>
-            </article>
-        </div>
-    </section>
+        <!-- SERVICIOS -->
+        <section class="services-section" id="servicios">
+            <h2 class="section-title">Servicios freelance</h2>
+            <p class="section-sub">Elige los servicios que te interesan, agrégalos a tu lista y envíame la solicitud por WhatsApp o correo.</p>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3>Backend y APIs</h3>
+                    <p>APIs REST seguras para tu aplicación, conectadas a tu base de datos y a servicios externos o modelos de IA.</p>
+                    <h4>¿Qué haría?</h4>
+                    <ul><li>APIs con Java y Spring Boot (o Python)</li><li>Login con roles y seguridad JWT</li><li>Bases de datos PostgreSQL o MySQL</li><li>Integraciones y documentación con Swagger</li></ul>
+                    <h4>Experiencia</h4>
+                    <p class="service-exp">Seguridad JWT y usuarios en CampusDesk; API con RAG en Recetas RAG; integraciones con Gemini y Telegram en SmartCity-F.</p>
+                    <button class="btn btn-secondary add-btn" data-id="api">+ Añadir a mi lista</button>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Automatizaciones</h3>
+                    <p>Flujos que trabajan solos y eliminan tareas repetitivas, con IA para clasificar, decidir y avisar.</p>
+                    <h4>¿Qué haría?</h4>
+                    <ul><li>Flujos en n8n de principio a fin</li><li>Clasificación y priorización con IA</li><li>Avisos por Telegram y correo</li><li>Registros y reportes automáticos</li></ul>
+                    <h4>Experiencia</h4>
+                    <p class="service-exp">Priorización de incidentes en SmartCity-F, motor de riesgo de 22 pasos en SafeGuardian y búsqueda de recetas en Recetas RAG.</p>
+                    <button class="btn btn-secondary add-btn" data-id="auto">+ Añadir a mi lista</button>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Bots e IA</h3>
+                    <p>Bots que atienden, notifican y recolectan información, con respuestas inteligentes cuando las necesitas.</p>
+                    <h4>¿Qué haría?</h4>
+                    <ul><li>Bots de Telegram a la medida</li><li>Respuestas con IA sobre tu información (RAG)</li><li>Alertas en tiempo real</li><li>Conexión con tus sistemas y bases de datos</li></ul>
+                    <h4>Experiencia</h4>
+                    <p class="service-exp">Bot de consulta de tickets en SmartCity-F y alertas automáticas al supervisor en SafeGuardian.</p>
+                    <button class="btn btn-secondary add-btn" data-id="bots">+ Añadir a mi lista</button>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Páginas web</h3>
+                    <p>Sitios y aplicaciones web modernas y responsivas, desde una landing hasta un panel completo.</p>
+                    <h4>¿Qué haría?</h4>
+                    <ul><li>Landing pages, portafolios y sitios informativos</li><li>Dashboards y apps interactivas</li><li>Diseño para celular, tablet y PC</li><li>Mapas, calendarios y gamificación</li></ul>
+                    <h4>Experiencia</h4>
+                    <p class="service-exp">Don't Give Up (finanzas gamificadas), las vistas de Mega Music App y este portafolio.</p>
+                    <button class="btn btn-secondary add-btn" data-id="web">+ Añadir a mi lista</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact-section" id="contacto">
+            <h2 class="section-title">¿Hablamos?</h2>
+            <p class="section-sub">¿Tienes una vacante, un proyecto o una idea? Escríbeme por donde te quede más fácil.</p>
+            <div class="contact-grid">
+                <a class="contact-card wa" data-whatsapp="contacto" href="#" target="_blank" rel="noopener">
+                    <span class="contact-icon">💬</span>
+                    <strong>WhatsApp</strong>
+                    <small>+57 302 364 7730</small>
+                    <em>Abrir chat →</em>
+                </a>
+                <a class="contact-card mail" id="contact-gmail" href="#" target="_blank" rel="noopener">
+                    <span class="contact-icon">✉️</span>
+                    <strong>Correo</strong>
+                    <small>jonatandavidsarmientosierra@gmail.com</small>
+                    <em>Escribir en Gmail →</em>
+                </a>
+                <a class="contact-card in" id="contact-linkedin" href="#" target="_blank" rel="noopener">
+                    <span class="contact-icon">in</span>
+                    <strong>LinkedIn</strong>
+                    <small>Jonatan Sarmiento</small>
+                    <em>Ver perfil →</em>
+                </a>
+                <a class="contact-card gh" id="contact-github" href="#" target="_blank" rel="noopener">
+                    <span class="contact-icon">&lt;/&gt;</span>
+                    <strong>GitHub</strong>
+                    <small>@Jonatan-17</small>
+                    <em>Ver código →</em>
+                </a>
+            </div>
+            <p class="contact-alt">¿No usas Gmail? <a id="contact-mailto" href="#">Abre tu app de correo</a> o <button class="link-btn" id="copy-email">copia mi correo</button>.</p>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer" id="contacto">
-        <div class="footer-content">
-            <div class="footer-logo">JONATAN DAVID</div>
-            <p>Desarrollador Full Stack | Cambiando el mundo con código</p>
-            <div class="footer-social">
-                <a id="link-whatsapp" href="#" target="_blank">WhatsApp</a>
-                <a id="link-email" href="#">Email</a>
-                <a id="link-github" href="#" target="_blank">GitHub</a>
-                <a id="link-linkedin" href="#" target="_blank">LinkedIn</a>
-            </div>
-            <p class="footer-copy">© 2025 Jonatan David. Todos los derechos reservados.</p>
-        </div>
+    <footer class="footer">
+        <div class="footer-logo">JONATAN DAVID</div>
+        <p>Desarrollador Backend · Java, Spring Boot y automatización con IA</p>
+        <p class="footer-copy">© <span id="year">2026</span> Jonatan David Sarmiento Sierra · Piedecuesta, Santander, Colombia</p>
     </footer>
 
     <!-- MODAL TRÁILER -->
-    <div class="trailer-modal" id="trailer-modal">
+    <div class="trailer-modal" id="trailer-modal" role="dialog" aria-modal="true" aria-labelledby="trailer-title">
         <div class="trailer-content">
-            <button class="close-btn" onclick="closeTrailer()">✕</button>
+            <button class="close-btn" id="close-trailer" aria-label="Cerrar">✕</button>
             <div class="trailer-slideshow" id="trailer-slideshow"></div>
+            <div class="trailer-dots" id="trailer-dots"></div>
             <div class="trailer-info">
                 <div class="trailer-header">
-                    <h2 id="trailer-title">Título del Proyecto</h2>
-                    <span class="trailer-badge badge-dev" id="trailer-badge">EN DESARROLLO</span>
+                    <h2 id="trailer-title">Proyecto</h2>
+                    <span class="trailer-badge" id="trailer-badge"></span>
                 </div>
-                <div class="trailer-meta">
-                    <span class="match-score">98% relevante</span>
-                    <span class="year">2025</span>
-                    <span class="rating">PG-13</span>
-                </div>
-                <div class="trailer-buttons">
-                    <a href="#" target="_blank" class="btn btn-primary" id="trailer-github">▶ Ver en GitHub</a>
-                    <button class="btn btn-secondary">+ Mi Lista</button>
-                </div>
-                <p class="trailer-description" id="trailer-description">Descripción del proyecto.</p>
+                <div class="trailer-meta" id="trailer-meta"></div>
+                <div class="trailer-buttons" id="trailer-buttons"></div>
+                <p class="trailer-description" id="trailer-description"></p>
+                <div id="trailer-role"></div>
                 <h4 class="trailer-h">¿Qué hace?</h4>
                 <ul class="trailer-features" id="trailer-features"></ul>
                 <h4 class="trailer-h">Tecnologías</h4>
@@ -261,15 +249,19 @@
     </div>
 
     <!-- MI LISTA DE SERVICIOS -->
-    <button class="list-fab" onclick="toggleLista()">📋 Mi Lista <span id="list-count">0</span></button>
-    <aside class="list-panel" id="list-panel">
-        <div class="list-head"><h3>Mi lista de servicios</h3><button class="close-list" onclick="toggleLista()">✕</button></div>
+    <button class="list-fab" id="list-fab">📋 Mi lista <span id="list-count">0</span></button>
+    <aside class="list-panel" id="list-panel" aria-label="Mi lista de servicios">
+        <div class="list-head"><h3>Mi lista de servicios</h3><button class="close-list" id="close-list" aria-label="Cerrar">✕</button></div>
         <ul id="list-items"></ul>
         <p class="list-empty" id="list-empty">Aún no has agregado servicios.</p>
         <textarea id="list-msg" placeholder="Cuéntame brevemente tu idea o proyecto (opcional)"></textarea>
-        <button class="btn btn-primary" onclick="enviarSolicitud('whatsapp')">Enviar por WhatsApp</button>
-        <button class="btn btn-secondary" onclick="enviarSolicitud('email')">Enviar por Email</button>
+        <p class="list-warn" id="list-warn" hidden>Agrega al menos un servicio a tu lista.</p>
+        <button class="btn btn-primary" data-send="whatsapp">💬 Enviar por WhatsApp</button>
+        <button class="btn btn-secondary" data-send="gmail">✉️ Enviar por Gmail</button>
+        <button class="link-btn" data-send="mailto">o usar mi app de correo</button>
     </aside>
+
+    <div class="toast" id="toast" role="status"></div>
 
     <script src="script.js"></script>
 </body>

@@ -36,6 +36,7 @@ body {
 .nav-left { display: flex; align-items: center; gap: 40px; }
 
 .logo {
+    text-decoration: none;
     font-family: var(--font-logo);
     font-size: 2rem;
     color: var(--netflix-red);
@@ -58,7 +59,7 @@ body {
 /* ===== HERO ===== */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 60px;
@@ -89,9 +90,11 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #e5e5e5;
+    margin-bottom: 16px;
+    max-width: 620px;
 }
 
 .hero-tagline {
@@ -103,7 +106,7 @@ body {
     padding-left: 15px;
 }
 
-.hero-buttons { display: flex; gap: 15px; }
+.hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
 
 .btn {
     padding: 12px 30px;
@@ -171,6 +174,11 @@ body {
 .project-card {
     min-width: 300px;
     max-width: 300px;
+    border: none;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+    font: inherit;
     background: var(--bg-card);
     border-radius: 8px;
     overflow: hidden;
@@ -230,21 +238,15 @@ body {
     color: var(--text-secondary);
 }
 
-.timeline-placeholder {
-    padding: 60px;
-    text-align: center;
-    color: var(--text-secondary);
-    border: 2px dashed #333;
-    border-radius: 10px;
-}
 
 /* ===== FOOTER ===== */
 .footer {
-    padding: 60px;
+    padding: 50px 60px 90px;
     text-align: center;
     border-top: 1px solid #333;
-    margin-top: 60px;
+    color: var(--text-secondary);
 }
+.footer p { margin: 6px 0; }
 
 .footer-logo {
     font-family: var(--font-logo);
@@ -253,6 +255,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* (redes del footer movidas a la sección de contacto) */
 .footer-social {
     display: flex;
     justify-content: center;
@@ -513,18 +516,122 @@ body {
 .trailer-features li { color: var(--text-secondary); font-size: 0.92rem; padding: 5px 0 5px 22px; position: relative; line-height: 1.5; }
 .trailer-features li::before { content: '▶'; position: absolute; left: 0; font-size: 0.7rem; top: 9px; color: var(--netflix-red); }
 
+
+/* ===== MEJORAS v2 ===== */
+html { scroll-behavior: smooth; }
+section[id], header[id] { scroll-margin-top: 70px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* Navbar */
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-cta { background: var(--netflix-red); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+.nav-cta:hover { background: #f6121d; }
+.menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+/* Hero */
+.hero-badge { display: inline-flex; align-items: center; gap: 10px; background: none; padding: 0; color: #e5e5e5; letter-spacing: 4px; }
+.hero-badge span { font-family: var(--font-logo); font-size: 2rem; color: var(--netflix-red); letter-spacing: 0; line-height: 1; }
+.hero-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; font-size: 0.95rem; color: #e5e5e5; }
+.hero-meta .match, .trailer-meta .match { color: #46d369; font-weight: 700; }
+.hero-meta .hd, .trailer-meta .hd { border: 1px solid rgba(255,255,255,0.5); border-radius: 3px; padding: 0 6px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; }
+
+/* Filas de proyectos */
+.rows-section { padding-top: 10px; }
+.carousel-section .section-title { font-size: 1.35rem; }
+.carousel { scroll-snap-type: x proximity; padding: 20px 4px 30px; }
+.project-card { scroll-snap-align: start; }
+.project-card:hover, .project-card:focus-visible { z-index: 3; }
+.card-image { display: block; }
+.card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 55%); }
+.card-title-art { position: absolute; left: 14px; right: 14px; bottom: 10px; z-index: 2; font-family: var(--font-logo); font-size: 1.9rem; letter-spacing: 1.5px; line-height: 1; text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+.card-badge { z-index: 3; }
+.card-overlay { z-index: 2; }
+.card-info { display: block; }
+.badge-done { background: #46d369; color: #000; }
+.badge-team { background: #2f80ed; color: #fff; }
+.badge-hack { background: #9b51e0; color: #fff; }
+.badge-new { background: var(--netflix-red); color: #fff; }
+.carousel-btn { border-radius: 4px; }
+
+/* Top 3 con números gigantes */
+.carousel-top { gap: 30px; padding-left: 10px; }
+.top-item { display: flex; align-items: flex-end; flex-shrink: 0; }
+.top-number { font-family: var(--font-logo); font-size: 13rem; line-height: 0.78; color: var(--bg-dark); -webkit-text-stroke: 4px #595959; margin-right: -26px; user-select: none; }
+.top-item .project-card { position: relative; }
+
+/* Tráiler */
+.trailer-badge { padding: 4px 10px; border-radius: 3px; font-size: 0.75rem; font-weight: 700; }
+.trailer-buttons { flex-wrap: wrap; }
+.trailer-slideshow { background: #000; }
+.trailer-slideshow img { object-fit: cover; object-position: top center; }
+.trailer-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0 0; }
+.trailer-dots:empty { display: none; }
+.trailer-dots button { width: 26px; height: 4px; border: none; border-radius: 2px; background: #555; cursor: pointer; }
+.trailer-dots button.active { background: var(--netflix-red); }
+
+/* Servicios */
+.services-section { padding: 40px 60px 20px; }
+.add-btn { width: 100%; }
+
+/* Contacto */
+.contact-section { padding: 50px 60px 40px; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.contact-card { display: flex; flex-direction: column; gap: 6px; background: var(--bg-card); border-radius: 10px; padding: 24px; text-decoration: none; color: var(--text-primary); border-top: 3px solid var(--accent, var(--netflix-red)); transition: transform 0.3s, box-shadow 0.3s; }
+.contact-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+.contact-card.wa { --accent: #25D366; }
+.contact-card.mail { --accent: var(--netflix-red); }
+.contact-card.in { --accent: #0A66C2; }
+.contact-card.gh { --accent: #b3b3b3; }
+.contact-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; font-size: 1.3rem; font-weight: 800; background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent); margin-bottom: 6px; }
+.contact-card strong { font-size: 1.15rem; }
+.contact-card small { color: var(--text-secondary); font-size: 0.85rem; overflow-wrap: anywhere; }
+.contact-card em { font-style: normal; color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: 6px; }
+.contact-alt { margin-top: 20px; color: var(--text-secondary); font-size: 0.9rem; }
+.contact-alt a, .link-btn { color: #fff; text-decoration: underline; background: none; border: none; font: inherit; cursor: pointer; padding: 0; }
+.list-panel .link-btn { color: var(--text-secondary); font-size: 0.85rem; }
+.list-warn { color: #ff6b6b; font-size: 0.85rem; }
+
+/* Aviso flotante */
+.toast { position: fixed; left: 50%; bottom: 30px; transform: translate(-50%, 20px); background: #fff; color: #000; padding: 10px 18px; border-radius: 6px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 3000; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .navbar { padding: 15px 20px; }
-    .nav-links { display: none; }
-    .hero { padding: 0 20px; }
-    .hero-title { font-size: 3rem; }
-    .carousel-section { padding: 30px 20px; }
-    .project-card { min-width: 250px; max-width: 250px; }
+@media (max-width: 900px) {
+    .navbar { padding: 14px 20px; background: rgba(20,20,20,0.95); }
+    .menu-btn { display: block; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #141414; border-top: 1px solid #333; }
+    .navbar.menu-open .nav-links { display: flex; }
+    .nav-links a { display: block; padding: 14px 20px; font-size: 1rem; }
+    .hero { padding: 110px 20px 60px; align-items: flex-end; }
+    .hero-title { font-size: 3.4rem; }
+    .hero-buttons .btn { flex: 1 1 100%; justify-content: center; }
+    .carousel-section, .services-section, .contact-section { padding-left: 20px; padding-right: 20px; }
+    .carousel-btn { display: none; }
+    .project-card { min-width: 240px; max-width: 240px; }
+    .card-image { height: 140px; }
+    .top-number { font-size: 9rem; -webkit-text-stroke: 3px #595959; margin-right: -18px; }
     .about-section { padding: 30px 20px; }
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
     .story-section { padding: 30px 20px; }
     .story { grid-template-columns: 1fr; gap: 30px; }
     .story-photo { order: -1; }
     .photo-frame { max-width: 280px; }
+    .trailer-modal.active { padding: 0; }
+    .trailer-content { border-radius: 0; min-height: 100%; }
+    .trailer-slideshow { height: 230px; }
+    .trailer-info { padding: 20px; }
+    .trailer-header h2 { font-size: 1.6rem; }
+    .footer { padding: 40px 20px 100px; }
 }
+@media (max-width: 480px) {
+    .nav-cta { display: none; }
+    .logo { font-size: 1.6rem; }
+    .hero-title { font-size: 2.8rem; }
+    .list-fab { right: 15px; bottom: 15px; }
+}
+
+[hidden] { display: none !important; }
