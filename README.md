@@ -1,4 +1,16 @@
+<div align="center">
+
 # Portafolio · Jonatan David Sarmiento
+
+### 👉 [Ver el portafolio en vivo](https://portafolio-jonatan.vercel.app) 👈
+
+<a href="https://portafolio-jonatan.vercel.app"><img src="https://img.shields.io/badge/ABRIR%20PORTAFOLIO-portafolio--jonatan.vercel.app-E50914?style=for-the-badge&logo=vercel&logoColor=white" alt="Abrir portafolio"></a>
+
+<a href="https://portafolio-jonatan.vercel.app"><img src="assets/og-image.png" alt="Vista previa del portafolio (clic para abrir)" width="760"></a>
+
+</div>
+
+---
 
 Portafolio personal con estilo inspirado en Netflix: proyectos en filas tipo catálogo, "tráiler" con capturas y detalles de cada proyecto, mi historia por temporadas y servicios freelance con una lista que se envía por WhatsApp o correo.
 
