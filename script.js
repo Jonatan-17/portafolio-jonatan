@@ -5,7 +5,7 @@ const CONFIG = {
     email: "jonatandavidsarmientosierra@gmail.com",
     github: "https://github.com/Jonatan-17",
     linkedin: "https://www.linkedin.com/in/jonatan-sarmiento-16a206366/",
-    cv: ""                                // ruta del PDF de la hoja de vida (vacío = botón oculto)
+    cv: "assets/docs/HDV_Jonatan_Sarmiento.pdf" // hoja de vida (español e inglés)
 };
 
 const MENSAJES = {

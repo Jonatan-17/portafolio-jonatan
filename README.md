@@ -4,6 +4,8 @@ Portafolio personal con estilo inspirado en Netflix: proyectos en filas tipo cat
 
 **Sitio:** https://portafolio-jonatan.vercel.app
 
+**Hoja de vida:** [HDV_Jonatan_Sarmiento.pdf](assets/docs/HDV_Jonatan_Sarmiento.pdf) (español e inglés), también descargable desde el botón "Hoja de vida" del sitio.
+
 ## Tecnologías
 
 HTML5, CSS3 y JavaScript sin frameworks. Publicado en Vercel.
@@ -16,6 +18,7 @@ styles.css            Estilos (escritorio y celular)
 script.js             Datos de proyectos y contacto, filas, tráiler, "Mi lista"
 assets/proyectos/     Capturas y portadas de cada proyecto
 assets/images/        Foto de perfil
+assets/docs/          Hoja de vida en PDF
 tools/portadas.py     Genera las portadas SVG, el favicon y la imagen para compartir
 ```
 
